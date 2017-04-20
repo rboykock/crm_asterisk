@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CallCenter</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="/index.html">Головна</a></li>
+            <li><a href="/customers.html">Клієнти</a></li>
+            <li class="active"><a href="/users.html">Користувачі</a></li>
+            <li><a href="/campaigns.html">Компанії</a></li>
+            <li><a href="/diallist.html">Обдзвонний список</a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav  navbar-form navbar-left">
+                <button class="btn btn-default">ГОТОВ/ПАУЗА</button>
+            </div>
+            <div class="nav navbar-right navbar-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Знайти">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="btn btn-default" href="#">Вихід</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Список користувачів&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Загальна кількість">42</span> | Додати нового користувача | Користувач: <strong>Петренко Петро Петрович</strong></div>
+        <div class="panel-body">
+            <div id="users_list">
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Користувач</th>
+                    <th>Логін</th>
+                    <th>Номер</th>
+                    <th>Роль</th>
+                    <th>Електронна адреса</th>
+                    <th><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Додати користувача"><span class="glyphicon glyphicon-plus"></span></button></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Петренко Петро Петрович</td>
+                    <td>pppetrovich</td>
+                    <td>100</td>
+                    <td>Оператор</td>
+                    <td><a href="mailto:petrovich@gmail.com">petrovich@gmail.com</a></td>
+                    <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+            <div class="text-center">
+                <ul class="pagination">
+                    <li ><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <div id="user_form">
+                <form id="userForm" role="form">
+                    <div class="form-group">
+                        <label for="inputUserName">Користувач</label>
+                        <input type="text" class="form-control" id="inputUserName" name="userName" placeholder="Введіть ім'я користувача" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserLogin">Логін</label>
+                        <input type="text" id="inputUserLogin" name="userLogin" class="form-control" placeholder="Введіть логін" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserPassword">Пароль</label>
+                        <input type="password" id="inputUserPassword" name="userPassword" class="form-control" placeholder="Введіть пароль" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserExtension">Номер</label>
+                        <input type="text" id="inputUserExtension" name="userExtension" class="form-control" placeholder="Введіть внутрішній номер телефону" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserRole">Роль</label>
+                        <select class="form-control" id="inputUserRole" name="userRole">
+                            <option value="none">Виберіть роль</option>
+                            <option value="admin">Адміністратор</option>
+                            <option value="operator">Оператор</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Введіть адрем електронної почти">
+                    </div>
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-default">Зберегти</button>
+                        <button class="btn btn-default">Скасувати</button>
+                    </div>
+                </form>
+            </div>
+            <div id="user_show">
+                <table class="table table-user-information table-striped">
+                    <thead>
+                    <tr>
+                        <td><strong>Користувач</strong></td>
+                        <td>Петренко Петро Петрович</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><strong>Логін</strong></td>
+                        <td>pppetrovich</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Номер</strong></td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Роль</strong></td>
+                        <td>Оператор</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Електронна адреса</strong></td>
+                        <td>petrovich@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-right"><button type="submit" class="btn btn-default">Редагувати</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel-footer">&nbsp;</div>
+    </div>
+</div>
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="text-muted text-center">&copy; rboykock</p>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip()
+</script>
+</body>
+</html>

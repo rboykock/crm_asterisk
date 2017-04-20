@@ -1,0 +1,34 @@
+<div id="campaing_assign_users">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Номер користувача</th>
+            <th>Логін користувача</th>
+            <th>Email</th>
+            <th>&#160;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td ng-bind="$index+1"></td>
+            <td ng-bind="user.extension"></td>
+            <td ng-bind="user.login"></td>
+            <td><a href="mailto:{{user.email}}" ng-bind="user.email"></a></td>
+            <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити" ng-click="clickDropUserFromCampaign(user.extension,campaingId)"><span class="glyphicon glyphicon-trash"></span></button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--
+<div class="text-center">
+    <ul class="pagination">
+        <li ><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>-->

@@ -1,0 +1,27 @@
+<div id="campaing_form">
+    <form id="customerForm" role="form">
+        <div class="form-group">
+            <label for="inputCompany">Назва компанії</label>
+            <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Введіть назву компаніі" required ng-model="campaing.name">
+        </div>
+        <div class="form-group">
+            <label for="assignUsers">Назначити оператора</label>
+            <div class="form-group form-inline">
+                <select multiple class="form-control" id="assignUsers" ng-model="assignedExt">
+                    <option ng-repeat="user in users" value="{{user.extension}}" ng-bind="user.fullName+'('+user.extension+')'"></option>
+                </select>
+                <div class="btn-group-vertical" id="assignBtn">
+                    <button id="assignUsersBtn"class="btn btn-default" ng-click="assignUsers()">&#187;</button>
+                    <button id="unassignUsersBtn" class="btn btn-default" ng-click="unassignUsers()">&#171;</button>
+                </div>
+                <select multiple class="form-control" id="assignedUsers" ng-model="assignExt">
+                    <option ng-repeat="user in assignedUsers" value="{{user.extension}}" ng-bind="user.fullName+'('+user.extension+')'"></option>
+                </select>
+            </div>
+        </div>
+        <div class="pull-right">
+            <button  class="btn btn-default" ng-click="clickSave()">Зберегти</button>
+            <button class="btn btn-default" ng-click="clickCancel()">Скасувати</button>
+        </div>
+    </form>
+</div>

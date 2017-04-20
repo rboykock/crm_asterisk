@@ -1,0 +1,38 @@
+<div id="users_list">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Користувач</th>
+            <th>Логін</th>
+            <th>Номер</th>
+            <th>Роль</th>
+            <th>Електронна адреса</th>
+            <th><button type="button" ng-click="clickAdd()" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Додати користувача"><span class="glyphicon glyphicon-plus"></span></button></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td ng-bind="$index+1"></td>
+            <td ng-bind="user.fullName"></td>
+            <td ng-bind="user.login"></td>
+            <td ng-bind="user.extension"></td>
+            <td ng-bind="user.role"></td>
+            <td><a href="emailto:{{user.email}}" ng-bind="user.email"></a></td>
+            <td><button type="button" ng-click="clickEdit(user.id)" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати"><span class="glyphicon glyphicon-pencil"></span></button>&#160;<button type="button" ng-click="clickDrop(user.id)" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--
+<div class="text-center">
+    <ul class="pagination">
+        <li ><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>-->

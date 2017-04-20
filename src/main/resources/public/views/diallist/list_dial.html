@@ -1,0 +1,33 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Номер телефону</th>
+        <th>Назва організації</th>
+        <th>Контактне лице</th>
+        <th>Компанія</th>
+        <th>&#160;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="dial in diallist">
+        <td ng-bind="$index+1"></td>
+        <td ng-bind="dial.phoneNumber"></td>
+        <td ng-bind="dial.organizationName"></td>
+        <td ng-bind="dial.contactPerson"></td>
+        <td ng-bind="dial.campaignId"></td>
+        <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити" ng-click="clickDrop(dial.id)"><span class="glyphicon glyphicon-trash"></span></button></td>
+    </tr>
+    </tbody>
+</table>
+<!--<div class="text-center">
+    <ul class="pagination">
+        <li ><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>-->

@@ -1,0 +1,18 @@
+<div class="panel panel-primary" ng-controller="DialedCtrl">
+    <div class="panel-heading">Обдзвонний списо</div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs" id="dialTab">
+            <li ng-class="{'active':activeTab=='current_data_dial'}"><a ng-click="setActiveTab('current_data_dial')">Номери на обдзвін&#160;&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Загальна кількість" ng-bind="diallist.length"></span></a></li>
+            <li ng-class="{'active':activeTab=='current_data_dialed'}"><a ng-click="setActiveTab('current_data_dialed')">Обдзвонено&#160;&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Загальна кількість" ng-bind="dialedlist.length"></span></a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" ng-class="{'active':activeTab=='current_data_dial'}" id="current_data_dial" ng-controller="DiallistCtrl">
+                <ng-include src="'views/diallist/list_dial.html'"></ng-include>
+            </div>
+            <div class="tab-pane" ng-class="{'active':activeTab=='current_data_dialed'}" id="current_data_dialed" ng-controller="DialedlistCtrl">
+                <ng-include src="'views/diallist/list_dialed.html'"></ng-include>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">&nbsp;</div>
+</div>

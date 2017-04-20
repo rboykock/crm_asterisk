@@ -1,0 +1,36 @@
+<div id="user_form">
+    <form id="userForm" role="form">
+        <div class="form-group">
+            <label for="inputUserName">Користувач</label>
+            <input type="text" class="form-control" id="inputUserName" name="userName" placeholder="Введіть ім'я користувача" required ng-model="user.fullName">
+        </div>
+        <div class="form-group">
+            <label for="inputUserLogin">Логін</label>
+            <input type="text" id="inputUserLogin" name="userLogin" class="form-control" placeholder="Введіть логін" required ng-model="user.login">
+        </div>
+        <div class="form-group">
+            <label for="inputUserPassword">Пароль</label>
+            <input type="password" id="inputUserPassword" name="userPassword" class="form-control" placeholder="Введіть пароль" required ng-model="user.password">
+        </div>
+        <div class="form-group">
+            <label for="inputUserExtension">Номер</label>
+            <input type="text" id="inputUserExtension" name="userExtension" class="form-control" placeholder="Введіть внутрішній номер телефону" required ng-model="user.extension">
+        </div>
+        <div class="form-group">
+            <label for="inputUserRole">Роль</label>
+            <select class="form-control" id="inputUserRole" name="userRole" ng-model="user.role">
+                <option value="none">Виберіть роль</option>
+                <option value="ADMINISTRATOR">Адміністратор</option>
+                <option value="OPERATOR">Оператор</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Введіть адрем електронної почти" ng-model="user.email">
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-default" ng-click="clickSave(user)">Зберегти</button>
+            <button class="btn btn-default" ng-click="clickCansel()">Скасувати</button>
+        </div>
+    </form>
+</div>

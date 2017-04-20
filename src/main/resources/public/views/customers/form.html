@@ -1,0 +1,26 @@
+    <form id="customerForm" role="form">
+        <div class="form-group">
+            <label for="inputCompany">Назва організації</label>
+            <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Введіть назву компаніі" required ng-model="customer.organizationName">
+        </div>
+        <div class="form-group">
+            <label for="inputCustomer">Контактне лице</label>
+            <input type="text" id="inputCustomer" name="customer" class="form-control" placeholder="Введіть нконтактне лице" required ng-model="customer.contactPerson">
+        </div>
+        <div class="form-group">
+            <label for="inputPhone">Телефон</label>
+            <input type="tel" id="inputPhone" name="phone" class="form-control"  placeholder="Введіть номер телефона" required ng-model="customer.phoneNumber">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Введіть адрес електронної почти" ng-model="customer.email">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Адреса</label>
+            <input type="text" id="inputAddress" name="address" class="form-control" placeholder="Введіть адресу" ng-model="customer.address">
+        </div>
+        <div class="pull-right">
+            <button type="submit" class="btn btn-default" ng-click="clickSave(customer)">Зберегти</button>
+            <button class="btn btn-default" ng-click="clickCansel()">Скасувати</button>
+        </div>
+    </form>

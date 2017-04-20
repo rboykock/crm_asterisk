@@ -1,0 +1,35 @@
+<div id="campaings_list">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Назва компанії</th>
+            <th>Список операторів</th>
+            <th>Список клієнтів</th>
+            <th>Дата створення</th>
+            <th><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Додати клієнта" ng-click="clickAdd()"><span class="glyphicon glyphicon-plus"></span></button></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="campaing in campaigns">
+            <td ng-bind="$index+1"></td>
+            <td ng-bind="campaing.name"></td>
+            <td><a href="#" class="link-dashed" ng-click="clickShowUsers(campaing)">Оператори</a>&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Кількість" ng-bind="campaing.totalExtensions"></span></td>
+            <td><a href="#" ng-click="clickShowCustomers(campaing)">Клієнти</a>&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Кількість" ng-bind="campaing.totalDial"></span></td>
+            <td ng-bind="campaing.date_create | date:'yyyy-MM-dd HH:mm:ss'"></td>
+            <td><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Редагувати" ng-click="clickEdit(campaing.id)"><span class="glyphicon glyphicon-pencil" ></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити" ng-click="clickDrop(campaing.id)"><span class="glyphicon glyphicon-trash"></span></button>&#160;<button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="{{(campaing.status=='STOP')?'Запустити':'Зупинить'}}" ng-click="clickStatus(campaing.id,campaing.status)"><span class="glyphicon" ng-class="{'glyphicon-play':(campaing.status=='STOP'),'glyphicon-stop':(campaing.status=='START')}"></span></button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--<div class="text-center">
+    <ul class="pagination">
+        <li ><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>-->

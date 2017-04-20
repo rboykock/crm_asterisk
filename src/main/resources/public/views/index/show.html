@@ -1,0 +1,17 @@
+<table class="table table-user-information table-striped">
+    <tbody>
+    <tr>
+        <td><strong>Тема</strong></td>
+        <td ng-bind="note.subject"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Замітка</strong></td>
+    </tr>
+    <tr>
+        <td ng-bind="note.description" colspan="2"></td>
+    </tr>
+    </tbody>
+</table>
+<div class="pull-right">
+    <button type="submit" class="btn btn-default" ng-click="clickOk('note_list')">Ok</button>
+</div>

@@ -1,0 +1,31 @@
+<div id="user_show">
+    <table class="table table-user-information table-striped">
+        <thead>
+        <tr>
+            <td><strong>Користувач</strong></td>
+            <td ng-bind="user.fullName"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>Логін</strong></td>
+            <td ng-bind="user.login"></td>
+        </tr>
+        <tr>
+            <td><strong>Номер</strong></td>
+            <td ng-bind="user.extension"></td>
+        </tr>
+        <tr>
+            <td><strong>Роль</strong></td>
+            <td ng-bind="user.role"></td>
+        </tr>
+        <tr>
+            <td><strong>Електронна адреса</strong></td>
+            <td ng-bind="user.email"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-right"><button type="submit" class="btn btn-default">Редагувати</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

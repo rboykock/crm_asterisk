@@ -1,0 +1,17 @@
+<div class="panel panel-primary" ng-controller="UsersCtrl">
+    <div class="panel-heading" ng-bind-html="panelTitle"></div>
+    <div class="panel-body">
+        <div ng-switch on="usersView">
+            <div id="users_list" ng-switch-when="users_list">
+                <div ng-include="'views/users/list.html'"></div>
+            </div>
+            <div id="users_form" ng-switch-when="users_form">
+                <div ng-include="'views/users/form.html'"></div>
+            </div>
+            <div id="users_show" ng-switch-when="users_show">
+                <div ng-include="'views/users/show.html'"></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">&nbsp;</div>
+</div>

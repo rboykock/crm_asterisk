@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CallCenter</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js" data-require="angular.js@1.5.x"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/models.js"></script>
+    <script src="/js/controllers.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body ng-app="callCenterCRM">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/index.html">Головна</a></li>
+            <li><a href="/customers.html">Клієнти</a></li>
+            <li><a href="/users.html">Користувачі</a></li>
+            <li><a href="/campaigns.html">Компанії</a></li>
+            <li><a href="/diallist.html">Обдзвонний список</a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav  navbar-form navbar-left">
+                <button class="btn btn-default">ГОТОВ/ПАУЗА</button>
+            </div>
+            <div class="nav navbar-right navbar-form">
+                <a class="btn btn-default" href="#">Вихід</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h3>Карточка клієнта: <strong>Рога і копита</strong></h3></div>
+        <div class="panel-body">
+            <ul class="nav nav-tabs" id="customerTab">
+                <li class="active"><a href="#customer_data">Дані клієнта</a></li>
+                <li><a href="#customer_note">Замітки&#160;&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Загальна кількість">42</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="customer_data" ng-controller="CustomerData">
+                    <table class="table table-user-information table-striped">
+                        <thead>
+                            <tr>
+                                <td><strong>Назва організації</strong></td>
+                                <td ng-bind="customer.organizationName"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Контактне лице</strong></td>
+                                <td ng-bind="customer.contactPerson"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Номер телефона</strong></td>
+                                <td ng-bind="customer.phoneNumber"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Електронна адреса</strong></td>
+                                <td ng-bind="customer.email"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Адреса</strong></td>
+                                <td ng-bind="customer.address"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane" id="customer_note" ng-controller="CustomerNote">
+                    <div id="note_list">
+                        <table class="table table-note-information table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Дата</th>
+                                    <th>Тема</th>
+                                    <th>Оператор</th>
+                                    <th><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Додати замітку"><span class="glyphicon glyphicon-plus"></span></button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="note in notes">
+                                    <td ng-bind="$index+1"></td>
+                                    <td ng-bind="note.data"></td>
+                                    <td ng-bind="note.subject"></td>
+                                    <td ng-bind="note.user"></td>
+                                    <td><button type="button" ng-click="clickShow(note.id)" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Показати"><span class="glyphicon glyphicon-eye-open"></span></button>&#160;<button type="button" ng-click="clickDrop(note.id)" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Видалити"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li ><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="note_form">
+                        <h4>Додати нову замітку</h4>
+                        <form id="noteForm" role="form">
+                            <div class="form-group">
+                                <label for="inputSubject">Тема</label>
+                                <input type="text" class="form-control" id="inputSubject" name="subject" placeholder=" Введіть тему замітки" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage">Замітка</label>
+                                <textarea id="inputMessage" name="message" class="form-control noresize" rows="3" required></textarea>
+                            </div>
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-default">Зберегти</button>
+                                <button class="btn btn-default">Скасувати</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">&nbsp;</div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="text-muted text-center">&copy; geekhub</p>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+    $('#customerTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('[data-toggle="tooltip"]').tooltip()
+</script>
+</body>
+</html>

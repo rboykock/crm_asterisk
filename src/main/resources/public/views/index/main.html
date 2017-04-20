@@ -1,0 +1,28 @@
+<div class="panel panel-primary" ng-controller="IndexCtrl">
+    <div class="panel-heading"><h3>Карточка клієнта: <strong ng-bind="organizationName"></strong></h3></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs" id="customerTab">
+            <li ng-class="{'active':activeTab=='customer'}"><a ng-click="setActiveTab('customer')">Дані клієнта</a></li>
+            <li ng-class="{'active':activeTab=='notes'}"><a ng-click="setActiveTab('notes')">Замітки&#160;&#160;<span class="badge" data-toggle="tooltip" data-placement="top" title="Загальна кількість" ng-bind="totalNotes.length"></span></a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" ng-class="{'active':activeTab=='customer'}" id="customer_data" ng-controller="CustomerData">
+                <ng-include src="'views/index/customer.html'"></ng-include>
+            </div>
+            <div class="tab-pane" ng-class="{'active':activeTab=='notes'}" id="customer_note" ng-controller="CustomerNote">
+                <div ng-switch on="noteView">
+                    <div ng-switch-when="note_list">
+                        <div ng-include="'views/index/list.html'"></div>
+                    </div>
+                    <div  ng-switch-when="note_form">
+                        <div ng-include="'views/index/note_form.html'"></div>
+                    </div>
+                    <div  ng-switch-when="note_show">
+                        <div ng-include="'views/index/show.html'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">&nbsp;</div>
+</div>
